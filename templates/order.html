@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff7ed;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+h6 {
+    font-size: 2.5rem;
+    color: #f97316;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+    font-size: 1rem;
+}
+
+input, select {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
+}
+
+input:focus, select:focus {
+    border-color: #f97316;
+    outline: none;
+}
+
+.orderer {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #f97316;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.orderer:hover {
+    background-color: #e85d0c;
+    transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+    h6 {
+        font-size: 2rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+    input, select {
+        font-size: 0.9rem;
+    }
+    .orderer {
+        font-size: 1rem;
+    }
+}
+</style>
+</head>
+<body>
+    <h6>Оформити замовлення</h6>
+    <p>Дякуємо за вибір Jerry Pizza. Ваше замовлення знаходиться на обробці.</p>
+
+        <label for="name">Щоб оформити замовлення, введіть своє ім’я:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="phone">Ваш номер телефону, щоб ми могли зв’язатися з вами:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="address">Адреса доставки:</label>
+        <input type="text" id="address" name="address" required>
+
+        <label for="pizza">Обраний продукт:</label>
+        <select id="pizza" name="pizza" required>
+            <option value="margherita">Мишачий Класик</option>
+            <option value="pepperoni">Пепероні від Тома</option>
+            <option value="vegetarian">Джеррі в Сирі</option>
+            <option value="vegetarian">Томовий Барбекю</option>
+        </select>
+        <a href="/check" class="orderer">Замовити</a>
+</body>
+</html>

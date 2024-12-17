@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Додати нову піцу</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(255 247 237);
+        }
+        h5 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: rgb(249 115 22);
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        input, textarea {
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 1rem;
+        }
+        .next {
+            background-color: rgb(249, 115, 22);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-align: center;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            text-decoration: none;
+        }
+        .menu{
+            background-color: rgb(249, 115, 22);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-align: center;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Додати нову піцу</h1>
+    <form action="/add" method="post">
+        <label for="name">Название пиццы:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="description">Описание:</label>
+        <input type="text" id="description" name="description" required>
+
+        <label for="price">Цена:</label>
+        <input type="number" id="price" name="price" required>
+
+        <button type="submit">Добавить пиццу</button>
+    </form
+</body>
+</html>

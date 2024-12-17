@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Jerry Pizza{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        .card {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: auto;
+            z-index: 1000; /* Чтобы изображение было поверх других элементов */
+        }
+        .card:hover {
+            transform: scale(1.1); /* Збільшує картинку при наведенні */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Jerry Pizza</h1>
+        <img src="https://i.postimg.cc/BQNYxq50/photo-2024-11-21-13-50-27.jpg" class="banner">
+    </header>
+    <nav>
+        <a href="/menu" class="menuLink">Меню</a>
+        <a href="/order" class="orderLink">Заказать сейчас</a>
+        <a href="/aboutUs" class="aboutLink">О нас</a>
+        <a href="/login">
+            <img src="https://i.postimg.cc/YSTyhb6L/IMG-9683-srcnn-photo-noise2-8x-srcnn-photo-noise1-2x.jpg" class="card">
+        </a>
+    </nav>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>
